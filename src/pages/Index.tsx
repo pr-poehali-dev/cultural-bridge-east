@@ -8,10 +8,10 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
+      <MultilingualChat />
       <NavigationGrid />
       <CulturalHighlights />
       <InteractiveMap />
-      <MultilingualChat />
     </div>
   );
 };

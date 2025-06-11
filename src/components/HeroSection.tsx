@@ -15,6 +15,16 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
       </div>
 
+      {/* Chat Button - Fixed Top Right */}
+      <div className="absolute top-6 right-6 z-20">
+        <Button
+          onClick={() => window.dispatchEvent(new CustomEvent("toggleChat"))}
+          className="bg-forest-500/80 hover:bg-forest-600 text-white rounded-full p-3 shadow-lg hover:scale-105 transition-all duration-300 backdrop-blur-sm"
+        >
+          <Icon name="MessageCircle" size={20} />
+        </Button>
+      </div>
+
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto animate-fade-in">
         <h1 className="text-5xl md:text-7xl font-bold font-montserrat mb-6 leading-tight">

@@ -26,6 +26,12 @@ const MultilingualChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const handleToggleChat = () => setIsOpen((prev) => !prev);
+    window.addEventListener("toggleChat", handleToggleChat);
+    return () => window.removeEventListener("toggleChat", handleToggleChat);
+  }, []);
+
   const languages = {
     ru: { name: "🇷🇺 Русский", placeholder: "Напишите сообщение..." },
     en: { name: "🇺🇸 English", placeholder: "Type a message..." },
@@ -107,20 +113,11 @@ const MultilingualChat = () => {
   };
 
   if (!isOpen) {
-    return (
-      <div className="fixed bottom-6 right-6 z-50">
-        <Button
-          onClick={() => setIsOpen(true)}
-          className="bg-forest-500 hover:bg-forest-600 text-white rounded-full p-4 shadow-lg hover:scale-105 transition-all duration-300"
-        >
-          <Icon name="MessageCircle" size={24} />
-        </Button>
-      </div>
-    );
+    return null;
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 w-80 h-96 animate-scale-in">
+    <div className="fixed top-20 right-6 z-50 w-80 h-96 animate-scale-in">
       <Card className="h-full flex flex-col shadow-xl">
         <CardHeader className="bg-forest-500 text-white rounded-t-lg">
           <div className="flex items-center justify-between">
