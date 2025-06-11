@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import NavigationGrid from "@/components/NavigationGrid";
 import CulturalHighlights from "@/components/CulturalHighlights";
 import InteractiveMap from "@/components/InteractiveMap";
+import MultilingualChat from "@/components/MultilingualChat";
 
 const Index = () => {
   return (
@@ -10,6 +11,7 @@ const Index = () => {
       <NavigationGrid />
       <CulturalHighlights />
       <InteractiveMap />
+      <MultilingualChat />
     </div>
   );
 };
