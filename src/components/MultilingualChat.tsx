@@ -31,13 +31,15 @@ const MultilingualChat = () => {
     en: { name: "🇺🇸 English", placeholder: "Type a message..." },
     zh: { name: "🇨🇳 中文", placeholder: "输入消息..." },
     ko: { name: "🇰🇷 한국어", placeholder: "메시지를 입력하세요..." },
+    ja: { name: "🇯🇵 日本語", placeholder: "メッセージを入力してください..." },
   };
 
   const welcomeMessages = {
-    ru: "Добро пожаловать! Я помогу вам узнать больше о культуре Дальнего Востока.",
-    en: "Welcome! I will help you learn more about Far Eastern culture.",
-    zh: "欢迎！我将帮助您了解更多远东文化。",
-    ko: "환영합니다! 극동 문화에 대해 자세히 알아보는 데 도움을 드리겠습니다.",
+    ru: "Добро пожаловать в Мост культуры! Расскажу о традициях народов Дальнего Востока — от нанайцев до эвенков.",
+    en: "Welcome to Culture Bridge! I'll tell you about Far Eastern peoples' traditions — from Nanai to Evenks.",
+    zh: "欢迎来到文化桥梁！我将为您介绍远东民族的传统——从那乃族到鄂温克族。",
+    ko: "문화의 다리에 오신 것을 환영합니다! 나나이족부터 에벤크족까지 극동 민족의 전통을 알려드리겠습니다.",
+    ja: "文化の架け橋へようこそ！ナナイ族からエヴェンキ族まで、極東民族の伝統についてお話しします。",
   };
 
   const scrollToBottom = () => {
@@ -78,10 +80,11 @@ const MultilingualChat = () => {
     // Симуляция ответа бота
     setTimeout(() => {
       const botResponses = {
-        ru: "Спасибо за ваш вопрос! В ближайшее время эта функция будет расширена.",
-        en: "Thank you for your question! This feature will be expanded soon.",
-        zh: "谢谢您的问题！此功能即将扩展。",
-        ko: "질문해 주셔서 감사합니다! 이 기능은 곧 확장될 예정입니다.",
+        ru: "Интересный вопрос! Коренные народы Дальнего Востока сохранили богатые традиции. Хотите узнать о конкретном народе?",
+        en: "Interesting question! Far Eastern indigenous peoples have preserved rich traditions. Would you like to learn about a specific people?",
+        zh: "有趣的问题！远东原住民保留了丰富的传统。您想了解具体的民族吗？",
+        ko: "흥미로운 질문입니다! 극동 원주민들은 풍부한 전통을 보존했습니다. 특정 민족에 대해 알고 싶으신가요?",
+        ja: "興味深い質問ですね！極東の先住民は豊かな伝統を保持しています。特定の民族について知りたいですか？",
       };
 
       const botMessage: Message = {

@@ -5,27 +5,41 @@ const InteractiveMap = () => {
   const regions = [
     {
       name: "Приморский край",
-      description: "Дом амурского тигра и морские пейзажи",
+      description:
+        "Дом амурского тигра, нанайцев и удэгейцев. Владивосток — ворота в Азию",
       icon: "Trees",
       color: "bg-forest-500",
     },
     {
       name: "Хабаровский край",
-      description: "Культурный центр и река Амур",
+      description:
+        "Культурный центр региона, река Амур, традиции эвенков и нанайцев",
       icon: "Waves",
       color: "bg-ocean-500",
     },
     {
       name: "Камчатский край",
-      description: "Вулканы, гейзеры и нетронутая природа",
+      description: "Вулканы, гейзеры, коряки и эвены. Петропавловск-Камчатский",
       icon: "Mountain",
       color: "bg-sunset-500",
     },
     {
       name: "Сахалинская область",
-      description: "Остров с уникальной историей",
+      description: "Остров айнов и нивхов, уникальная история освоения",
       icon: "MapPin",
       color: "bg-warm-500",
+    },
+    {
+      name: "Республика Саха (Якутия)",
+      description: "Земля якутов и эвенков, алмазная столица, полюс холода",
+      icon: "Snowflake",
+      color: "bg-blue-500",
+    },
+    {
+      name: "Чукотский АО",
+      description: "Край чукчей и эскимосов, Берингов пролив, северное сияние",
+      icon: "Sun",
+      color: "bg-purple-500",
     },
   ];
 
@@ -37,12 +51,12 @@ const InteractiveMap = () => {
             География культуры
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Каждый регион Дальнего Востока имеет свою уникальную историю и
-            традиции
+            От Якутии до Камчатки — каждый регион хранит уникальные традиции
+            коренных народов и современную культуру
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {regions.map((region, index) => (
             <Card
               key={index}
